@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesi 2</title>
+    <!-- Simple native CSS -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #e5e7eb;
+        }
+
+        header {
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1120px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: #38bdf8;
+        }
+
+        nav a {
+            margin-left: 16px;
+            color: #e5e7eb;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 24px 56px;
+        }
+
+        .hero {
+            max-width: 1120px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(2.25rem, 4vw, 3rem);
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .hero-text p {
+            font-size: 1rem;
+            color: #9ca3af;
+            margin-bottom: 24px;
+            max-width: 32rem;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary,
+        .btn-outline {
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-size: 0.95rem;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.1s;
+        }
+
+        .btn-primary {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        .btn-primary:hover {
+            background: #0ea5e9;
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border-color: #4b5563;
+            color: #e5e7eb;
+        }
+
+        .btn-outline:hover {
+            border-color: #9ca3af;
+            background: rgba(15, 23, 42, 0.7);
+        }
+
+        .hero-meta {
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        .hero-meta span {
+            color: #a855f7;
+            font-weight: 500;
+        }
+
+        .hero-card {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 18px;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            padding: 20px 20px 18px;
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.8);
+        }
+
+        .hero-card h2 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-card p {
+            font-size: 0.9rem;
+            color: #9ca3af;
+            margin-bottom: 16px;
+        }
+
+        .hero-card ul {
+            list-style: none;
+            margin-bottom: 14px;
+        }
+
+        .hero-card li {
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        .hero-card li span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            border-radius: 999px;
+            background: rgba(34, 197, 94, 0.1);
+            color: #22c55e;
+            font-size: 0.75rem;
+            margin-right: 8px;
+        }
+
+        footer {
+            padding: 14px 24px 18px;
+            font-size: 0.8rem;
+            color: #6b7280;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding-inline: 16px;
+            }
+
+            .hero {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .hero-card {
+                order: -1;
+            }
+
+            main {
+                padding-inline: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Bootcamp Sesi 2</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#program">Program</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Level Up Your Frontend Skills</h1>
+                <p>
+                    Belajar HTML & CSS dasar dengan proyek nyata. Bangun landing page pertama
+                    kamu dan pahami fondasi penting untuk menjadi web developer.
+                </p>
+                <div class="hero-cta">
+                    <button class="btn-primary">Mulai Sekarang</button>
+                    <button class="btn-outline">Lihat Materi Sesi 2</button>
+                </div>
+                <p class="hero-meta">
+                    Sesi hari ini: <span>Struktur halaman & styling dasar</span>
+                </p>
+            </div>
+
+            <aside class="hero-card" id="program">
+                <h2>Yang Akan Kamu Pelajari</h2>
+                <p>Satu halaman sederhana, tapi banyak konsep penting di baliknya.</p>
+                <ul>
+                    <li><span>✓</span> Struktur HTML yang rapi & semantik</li>
+                    <li><span>✓</span> Styling dengan native CSS di dalam file</li>
+                    <li><span>✓</span> Layout responsif dengan sedikit kode</li>
+                </ul>
+                <p class="hero-meta">
+                    Cocok untuk pemula yang ingin cepat praktek.
+                </p>
+            </aside>
+        </section>
+    </main>
+
+    <footer id="contact">
+        &copy; 2025 Co-Mentoring Bootcamp Batch 6 · Sesi 2 - HTML & CSS
+    </footer>
+</body>
+
+</html>
